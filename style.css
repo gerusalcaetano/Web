@@ -1,0 +1,26 @@
+/* ATIVIDADE 1- LINK */
+a {
+    color:red
+}
+a:hover {
+    color:lime
+}
+/* ATIVIDADE 2- PARÁGRAFOS */
+
+p { 
+    font-family: Arial
+}
+
+h1 + p {
+    font-weight: bold;
+
+}
+/* ATIVIDADE 3- CLASSE */
+.destaque {
+     font-family: Arial;}
+strong.destaque {
+    color: red;
+}
+p.destaque {
+    font-weight: bold;
+}
