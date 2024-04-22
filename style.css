@@ -1,26 +1,82 @@
-/* ATIVIDADE 1- LINK */
-a {
-    color:red
-}
-a:hover {
-    color:lime
-}
-/* ATIVIDADE 2- PARÁGRAFOS */
+ /*1)  Box model*/
 
-p { 
-    font-family: Arial
-}
-
-h1 + p {
-    font-weight: bold;
+.page-wrapper {
+    width: 80%;
+    max-width: 1280px;
+    margin:auto;
 
 }
-/* ATIVIDADE 3- CLASSE */
-.destaque {
-     font-family: Arial;}
-strong.destaque {
-    color: red;
+#zen-intro{
+    height: 550px;
+    
 }
-p.destaque {
-    font-weight: bold;
+
+aside ul{
+   list-style-type: none;
 }
+
+aside ul li{
+   margin: 1em;
+   text-align: center;
+ }
+
+ .main footer a {
+    border: solid 2px;
+    padding: 0.5em;
+    display: inline-block;
+
+
+ }
+ html{
+   
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 200;
+ }
+
+ #design-archives{
+    display: none;
+ }
+
+ #zen-intro header{
+    background-color: black;
+    color: white;
+     
+}
+
+#zen-intro header h1,  #zen-intro header h2{
+    display:inline-block
+}
+#zen-intro header h1{ 
+    margin-left: 1em;
+    margin-right: 1em;
+
+
+}
+ /*2)  Parágrafo */
+p{
+    text-indent: 1em;
+}
+
+ /* 3) Títulos*/
+ h1, h2, h3{
+    text-align: center;
+ }
+h1{font-size: 1.8rem;}
+h2{font-size: 1.4rem;}
+h2{font-size: 1.2rem;}
+
+ /* 4)Seções de resumo e principal*/
+
+ .summary{
+  
+    text-align: right;
+ }
+ .main p{
+ line-height: 1.5;
+}
+abbr{
+    font-variant: small-caps ;
+}
+
