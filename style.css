@@ -1,20 +1,54 @@
- /*O foco dessa atividade será reposicionar os elementos da nossa página!
+ /*1. Aplique o flexbox no rodapé da seção principal, e posicione os links de forma que fique centralizados e com espaçamento entre eles.
+- Defina um mesmo tamanho para os links.
+- Não se esqueça de tratar o caso de quebra de linha.
 
-1. Defina o elemento .page-wrapper como referência para posicionamento.
+2. Configure um layout de flexbox para a seção de benefícios da seguinte forma:
+- O texto deve ficar à esquerda, e o título à direita.
+- O título deve ficar centralizado verticalmente.
+- O texto deve ocupar aproximadamente 70% da largura, e o título 30%.
 
-2. Faça com que o painel .explanation ocupe 60% da largura disponível, mas crie um espaçamento a direita de 35% utilizando margin .
+3. Configure um layout de flexbox para a seção de participação da seguinte forma:
+- Cada item deve ocupar 50% do espaço disponível.
+- O título deverá ficar centralizado verticalmente.
 
-- Adicione uma borda à direita do painel de 1px, com a cor #1f295c
+4. Incluauma linha no topo e embaixo das seções de benefícios e participação, utilizando a propriedade border-bottom e border-top respectivamente.
 
-- Adicione um espaçamento interno de 2% no lado direito do painel.
+- Remova a ocorrência de borda duplicada entre as duas seções*/
+.supporting footer{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
 
-3. Agora mova o menu de designs para a direita da página, ocupando o espaço em branco deixado pelo elemento .explanation .
+.benefits{
+   display: flex;
+   border-bottom: 1px black solid;
+   }
+.benefits h3{
+   order:2;
+   align-self: center;
+   flex-basis: 30%
+}
 
-- Faça-o iniciar na parte superior da página, após a parte de introdução (por exemplo, aplicando top: 560px ).
+.benefits p{
+   flex-basis: 70%;
+}
 
-- Faça-o iniciar após o elemento .explanation (por exemplo, aplicando left: 62% ).
+.participation{
+   display: flex;
+   flex-wrap: wrap;
+   border-bottom: 1px black solid;
+   border-top: 1px black solid;
+}
 
-- Adicione um espaçamento interno horizontal de 2% no menu para centralizá-lo.*/
+.participation h3, p{
+   flex-basis: 50%;
+}
+
+.participation h3{
+   flex-basis: 50%;
+   align-self: center;
+}
 
 .page-wrapper {
    position: relative;
