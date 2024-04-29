@@ -1,19 +1,84 @@
- /*1. Aplique o flexbox no rodapé da seção principal, e posicione os links de forma que fique centralizados e com espaçamento entre eles.
-- Defina um mesmo tamanho para os links.
-- Não se esqueça de tratar o caso de quebra de linha.
+ /*1. Crie uma media query para telas inferiores a 768 pixels; nós a utilizaremos como layout mobile.
 
-2. Configure um layout de flexbox para a seção de benefícios da seguinte forma:
-- O texto deve ficar à esquerda, e o título à direita.
-- O título deve ficar centralizado verticalmente.
-- O texto deve ocupar aproximadamente 70% da largura, e o título 30%.
+2. Realize as seguintes mudanças para o layout mobile:
+- Remova o reposicionamento do menu de design para que ele se encaixe no mesmo lugar de antes.
+- Remova a borda lateral ao lado da div
+- Mude a orientação do Flexbox presente no elemento para vertical, e organize os elementos de forma empilhada
+- Remova a altura fixa presente no cabeçalho da página
+- Remova também o espaçamento inicial dado a cada um dos parágrafos
 
-3. Configure um layout de flexbox para a seção de participação da seguinte forma:
-- Cada item deve ocupar 50% do espaço disponível.
-- O título deverá ficar centralizado verticalmente.
+Vamos Deixar nossa página mais adequada a mídia de impressão também!
 
-4. Incluauma linha no topo e embaixo das seções de benefícios e participação, utilizando a propriedade border-bottom e border-top respectivamente.
+1. Crie uma media query para meios impressos, mas sem qualquer tipo de restrição relacionada a tela
 
-- Remova a ocorrência de borda duplicada entre as duas seções*/
+2. Adicione as seguintes modificações a essa media query: 
+- Altere o estilo da fonte para uma serifada, como times .
+- Inverta as cores do banner para que o fundo fique claro (assim como o restante da página)
+
+*/
+
+/*Layout mobile*/
+
+@media screen and (max-width: 768px){
+     .design-selection { 
+      position: static;
+      width: 100%
+   }
+  
+.explanation {
+   border-right: none;
+   width: 100%;
+}
+#zen-intro {
+   height: auto;
+   
+}
+
+.participation {
+   flex-direction: column;
+}
+p { text-indent: 0;
+   
+   }
+}
+
+@media print{
+   html{
+      font-family: 'Times New Roman', Times, serif;
+        }
+   #zen-intro header{ 
+      background-color: white;
+      color: black;
+   }
+   .explanation{
+      border-right: none; 
+      width: 100%;
+   }
+   #zen-intro {
+      height: auto;
+   }
+}
+a{
+   color: green;
+}
+a:hover {
+   color: rgba(0, 128, 0, 0.39);
+}
+.main p:first-of-type:first-letter{
+   font-size: 3em;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+    float: left;
+}
+
+.design-selection li {
+   border-top:1px solid greenyellow ;
+   padding-top: 3px;
+}
+.design-selection li:last-child {
+   border-bottom: 1px greenyellow solid;
+   padding-bottom: 3px;
+
+}
 .supporting footer{
    display: flex;
    align-items: center;
@@ -60,7 +125,6 @@
 
 .explanation{
    width:60%;
-   border-right: 1px solid #1f295c;
    padding:2%;
    }
 
